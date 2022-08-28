@@ -1,0 +1,111 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the container */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  font-family: sans-serif;
+  background-color: #131419;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Style for the clock digital  */
+.clock-digital {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 320px;
+  height: 150px;
+  border-radius: 30px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 10px rgba(0, 0, 0, 0.1),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.date-digital {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #cad3dc;
+}
+
+.hours {
+  font-size: 40px;
+}
+
+/* Style for the clock analog */
+
+.clock-analog {
+  display: flex;
+  width: 200px;
+  background-image: url(../assets/img/clock.png);
+  background-size: cover;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 10px rgba(0, 0, 0, 0.1),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clock-analog .hand {
+  position: absolute;
+  transform: bottom;
+}
+
+.clock-analog::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 12;
+}
+
+.hour::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  margin-left: -2px;
+  background-color: cyan;
+  bottom: 50%;
+  z-index: 11;
+}
+
+.minute::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  margin-left: -1px;
+  bottom: 50%;
+  height: 70px;
+  background-color: rgb(223, 255, 17);
+  z-index: 10;
+}
+
+.second::before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  width: 1px;
+  margin-left: -0.2px;
+  height: 80px;
+  background-color: #c9272d;
+  z-index: 9;
+}
